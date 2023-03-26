@@ -9,8 +9,8 @@
 #define BLYNK_AUTH_TOKEN "YNApsy1kF1siBzkOWrQbYbTzittxp4tQ" //Enter your blynk auth token
 
 char auth[] = BLYNK_AUTH_TOKEN;
-char ssid[] = "tselhome-906B";//Enter your WIFI name
-char pass[] = "Ayambakar12345";//Enter your WIFI password
+char ssid[] = "";//Enter your WIFI name
+char pass[] = "";//Enter your WIFI password
 
 
 BLYNK_WRITE(V0) {

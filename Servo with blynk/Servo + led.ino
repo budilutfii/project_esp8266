@@ -12,8 +12,8 @@
 Servo servo5;
 
 char auth[] = BLYNK_AUTH_TOKEN;
-char ssid[] = "tselhome-906B"; // Change your Wifi/ Hotspot Name
-char pass[] = "Ayambakar12345"; // Change your Wifi/ Hotspot Password
+char ssid[] = ""; // Change your Wifi/ Hotspot Name
+char pass[] = ""; // Change your Wifi/ Hotspot Password
 
 BLYNK_WRITE(V4)
 {

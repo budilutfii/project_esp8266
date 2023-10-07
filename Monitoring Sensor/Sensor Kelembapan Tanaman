@@ -1,0 +1,35 @@
+#include <ESP8266WiFi.h>
+#include <BlynkSimpleEsp8266.h>
+
+// Konfigurasi WiFi
+char auth[] = "";
+char ssid[] = "";
+char pass[] = "";
+
+// Konfigurasi pin sensor kelembapan (misalnya, sensor tanah)
+const int sensorPin = A0; // Menggunakan pin analog A0
+
+void setup()
+{
+  // Inisialisasi serial monitor
+  Serial.begin(9600);
+
+  // Inisialisasi koneksi WiFi
+  Blynk.begin(auth, ssid, pass);
+}
+
+void loop()
+{
+  Blynk.run();
+
+  // Membaca nilai sensor kelembapan
+  int sensorValue = analogRead(sensorPin);
+
+  // Mengonversi nilai analog ke persentase kelembapan (0-100%)
+  int humidityPercentage = map(sensorValue, 0, 1023, 0, 100);
+
+  // Mengirim data kelembapan ke Blynk
+  Blynk.virtualWrite(V7,humidityPercentage); // Mengirim kelembapan ke Widget Virtual V5
+
+  delay(2000); // Delay selama 2 detik
+}

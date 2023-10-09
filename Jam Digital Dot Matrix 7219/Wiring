@@ -1,0 +1,5 @@
+VCC ke VIN/3,3V
+GND ke GND
+DIN ke D8
+CS ke D7
+CLK ke D6
